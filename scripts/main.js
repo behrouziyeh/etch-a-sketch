@@ -9,9 +9,10 @@ function generateRandomColor() {
 }
 
 function setupCells(amount) {
+    grid.replaceChildren("");
     for (let i = 1; i <= amount * amount; i++) {
         const cell = document.createElement("div");
-        cell.classList.add("cell", `cell${i}`);
+        cell.classList.add("cell", `cell${amount}`);
         cell.addEventListener("mouseenter", (e) => {
             e.target.style.backgroundColor = generateRandomColor();
         });
@@ -21,5 +22,4 @@ function setupCells(amount) {
     }
 }
 
-console.log(generateRandomColor());
 setupCells(16);
