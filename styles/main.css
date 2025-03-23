@@ -2,9 +2,29 @@
     box-sizing: border-box;
 }
 
+.button-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.button-row > button {
+    background: transparent;
+    outline: 0;
+    border: 0.1rem solid black;
+    padding: 1rem;
+    border-radius: 10rem;
+    transition: all 50ms ease-in-out;
+}
+
+.button-row > button:hover {
+    background: #ddd;
+}
+
 .grid {
-    width: 512px;
-    height: 512px;
+    width: 32rem;
+    height: 32rem;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -12,5 +32,5 @@
 
 .cell {
     flex-shrink: 0;
-    border: 1px solid black;
+    border: 0.1rem solid black;
 }

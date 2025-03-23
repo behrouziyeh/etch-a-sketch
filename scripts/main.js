@@ -1,5 +1,5 @@
 const grid = document.querySelector(".grid");
-const setSizeBtn = document.querySelector('.set-size-button');
+const setSizeBtn = document.querySelector(".set-size-button");
 
 function generateRandomColor() {
     // create Red, Green, Values
@@ -18,11 +18,13 @@ function setupCells(amount) {
         cell.addEventListener("mouseenter", (e) => {
             e.target.style.backgroundColor = generateRandomColor();
         });
-        cell.style.width = 512 / amount + "px";
-        cell.style.height = 512 / amount + "px";
+        cell.style.width = 32 / amount + "rem";
+        cell.style.height = 32 / amount + "rem";
         grid.appendChild(cell);
     }
 }
 
-setSizeBtn.addEventListener('click', () => setupCells(+prompt("Grid Size? (Max: 100)", 0)))
+setSizeBtn.addEventListener("click", () =>
+    setupCells(+prompt("Grid Size? (Max: 100)", 0))
+);
 setupCells(16);
