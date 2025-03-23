@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const setSizeBtn = document.querySelector('.set-size-button');
 
 function generateRandomColor() {
     // create Red, Green, Values
@@ -9,6 +10,7 @@ function generateRandomColor() {
 }
 
 function setupCells(amount) {
+    if (amount > 100) return;
     grid.replaceChildren("");
     for (let i = 1; i <= amount * amount; i++) {
         const cell = document.createElement("div");
@@ -22,4 +24,5 @@ function setupCells(amount) {
     }
 }
 
+setSizeBtn.addEventListener('click', () => setupCells(+prompt("Grid Size? (Max: 100)", 0)))
 setupCells(16);
