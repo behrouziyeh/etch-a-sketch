@@ -15,9 +15,11 @@ function setupCells(amount) {
     grid.replaceChildren("");
     for (let i = 1; i <= amount * amount; i++) {
         const cell = document.createElement("div");
+        cell.style.opacity = 0;
         cell.classList.add("cell", `cell${amount}`);
         cell.addEventListener("mouseenter", (e) => {
             e.target.style.backgroundColor = generateRandomColor();
+            e.target.style.opacity = +e.target.style.opacity + 0.1;
         });
         cell.style.width = 32 / amount + "rem";
         cell.style.height = 32 / amount + "rem";
