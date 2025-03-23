@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const setSizeBtn = document.querySelector(".set-size-button");
+const toggleBorderBtn = document.querySelector(".toggle-border-button");
 
 function generateRandomColor() {
     // create Red, Green, Values
@@ -26,5 +27,8 @@ function setupCells(amount) {
 
 setSizeBtn.addEventListener("click", () =>
     setupCells(+prompt("Grid Size? (Max: 100)", 0))
+);
+toggleBorderBtn.addEventListener("click", () =>
+    grid.classList.toggle("grid--border")
 );
 setupCells(16);

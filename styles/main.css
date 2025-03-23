@@ -23,14 +23,18 @@
 }
 
 .grid {
-    width: 32rem;
-    height: 32rem;
+    width: 32.2rem;
+    height: 32.2rem;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    border: 0.1rem solid black;
 }
 
 .cell {
     flex-shrink: 0;
+}
+
+.grid--border .cell {
     border: 0.1rem solid black;
 }
